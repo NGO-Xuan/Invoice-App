@@ -10,11 +10,11 @@ if "invoice_date" not in st.session_state:
     st.session_state.invoice_date = datetime.today().date()
 
 
-# Load the Excel file
+file_url = "https://github.com/NGO-Xuan/Invoice-App/raw/refs/heads/main/Price%20List.xlsx"
+
 @st.cache_data
 def load_data():
-    file_path = r"C:\Users\ngox\Documents\Personal Info\Price - Invoice\Price List.xlsx"
-    df = pd.read_excel(file_path, engine="openpyxl")
+    df = pd.read_excel(file_url, engine="openpyxl")
     return df
 
 df = load_data()
