@@ -1,0 +1,2 @@
+This is the application to get the price list of items for Supplier, it is then deployed using Streamlit. 
+To run locally, use this python -m streamlit run InvoiceApp.py
